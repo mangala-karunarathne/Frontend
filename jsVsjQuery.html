@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Js Vs jQuery</title>
+    <script src="Jquirey.js"></script>
+</head>
+<body>
+    <button type="button"
+    onclick="document.getElementById('date').innerHTML = Date()">
+        Click Here to see the Magic
+    </button>
+    <h1 id="date"></h1>
+    <h1 id="Bid"> Click Here</h1>
+    </body>
+    <script>
+        //javascript
+        // document.getElementById("Bid").onclick = function(){
+        //     alert("You are using JavaScript")
+        // }  
+
+        //jQuery
+        $("button").click(function(){
+            alert("You are using jQuery")
+        })
+        $("Bid").click(function(){
+            alert("You are using jQuery")
+        })
+    </script>
+    
+</html>
+
