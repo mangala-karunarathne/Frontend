@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ajax Document</title>
+  </head>
+  <body>
+    <h1><h2>Cats</h2></h1>
+    <img src="/cat1_img.jpg" alt="cat image" />
+    <p>Cats</p>
+    <div>
+      <p>
+        Cats are small, domesticated mammals known for their soft fur, playful
+        personalities, and independent nature.
+      </p>
+    </div>
+    <button id="button1">More Information</button>
+    <div class="div1"></div>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+            $.ajax('moreinformation.html', {
+                success:function(result){
+                    $('#div1').append(result);
+                    $('#button1').hide();
+                }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
